@@ -1,0 +1,6 @@
+Ryan Carey
+rmc5242@g.rit.edu
+
+draw first part to the right, then upper right leg.
+split off and draw an h at an angle
+continue this way with each leg, recursively

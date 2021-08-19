@@ -1,0 +1,7 @@
+ABSTRACTION & INPUT PROMPT DESIGN PATTERNS (Albana Beqo)
+The Person class is created as an abstract class.
+Customer and Employee classes extend Person.
+Input Prompt has been included in the customer login page
+The username and the password text field include a prompt respectively. 
+(I understand that this is not a very useful practice here, however, we don't have many UI screens
+at this point, so this UI is the only one that I could use to demonstrate the Input Prompt pattern).

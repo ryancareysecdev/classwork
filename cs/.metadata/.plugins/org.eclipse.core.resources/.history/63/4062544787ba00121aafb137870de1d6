@@ -1,0 +1,14 @@
+package compsim;
+
+public class compsim {
+
+	/**
+	 * @param args
+	 */
+	private Register ac = new Register(40);
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

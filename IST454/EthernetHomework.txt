@@ -1,0 +1,52 @@
+Ryan Carey
+IST 454
+Professor Rawel
+10/11/2019
+								Ethernet / IP Packet Breakdown
+
+0000   ff ff ff ff ff ff 00 e0 47 20 05 d8 08 00 45 00   ........G ....E.	line 1: destination: FF:FF:FF:FF:FF:FF = mac broadcast address source: 00:e0:47:20:05:d8 type: 08 00 = ipv4
+0010   02 75 7d 93 00 00 80 11 a4 49 0a 37 0c 65 ff ff   .u}......I.7.e..	Data: log4J logging events for the Infocus Serial Port Adapter Command Service. The logging level is set to debug.
+0020   ff ff ea 86 1f 48 02 61 a6 b0 3c 6c 6f 67 34 6a   .....H.a..<log4j	This packet also initializes a udp listener for that service.
+0030   3a 65 76 65 6e 74 20 6c 6f 67 67 65 72 3d 22 49   :event logger="I	In the IP header section, the source IP is: 10.55.12.101 and destination is: 255.255.255.255 (broadcast)
+0040   6e 66 6f 63 75 73 2e 53 65 72 69 61 6c 50 6f 72   nfocus.SerialPor	The protocol is given to be "11" = 17 for UDP
+0050   74 2e 41 64 61 70 74 65 72 2e 43 6f 6d 6d 61 6e   t.Adapter.Comman
+0060   64 53 65 72 76 69 63 65 22 20 74 69 6d 65 73 74   dService" timest
+0070   61 6d 70 3d 22 31 34 36 34 38 31 38 30 31 30 37   amp="14648180107
+0080   35 34 22 20 6c 65 76 65 6c 3d 22 44 45 42 55 47   54" level="DEBUG
+0090   22 20 74 68 72 65 61 64 3d 22 34 22 3e 3c 6c 6f   " thread="4"><lo
+00a0   67 34 6a 3a 6d 65 73 73 61 67 65 3e 55 44 50 20   g4j:message>UDP 
+00b0   4c 69 73 74 65 6e 69 6e 67 20 61 74 20 70 6f 72   Listening at por
+00c0   74 20 31 30 34 33 38 2e 0a 3c 2f 6c 6f 67 34 6a   t 10438..</log4j
+00d0   3a 6d 65 73 73 61 67 65 3e 3c 6c 6f 67 34 6a 3a   :message><log4j:
+00e0   70 72 6f 70 65 72 74 69 65 73 3e 3c 6c 6f 67 34   properties><log4
+00f0   6a 3a 64 61 74 61 20 6e 61 6d 65 3d 22 6c 6f 67   j:data name="log
+0100   34 6a 61 70 70 22 20 76 61 6c 75 65 3d 22 49 6e   4japp" value="In
+0110   66 6f 63 75 73 2e 53 65 72 69 61 6c 50 6f 72 74   focus.SerialPort
+0120   2e 53 65 72 76 69 63 65 2e 65 78 65 22 20 2f 3e   .Service.exe" />
+0130   3c 6c 6f 67 34 6a 3a 64 61 74 61 20 6e 61 6d 65   <log4j:data name
+0140   3d 22 6c 6f 67 34 6e 65 74 3a 55 73 65 72 4e 61   ="log4net:UserNa
+0150   6d 65 22 20 76 61 6c 75 65 3d 22 4e 54 20 41 55   me" value="NT AU
+0160   54 48 4f 52 49 54 59 5c 53 59 53 54 45 4d 22 20   THORITY\SYSTEM" 
+0170   2f 3e 3c 6c 6f 67 34 6a 3a 64 61 74 61 20 6e 61   /><log4j:data na
+0180   6d 65 3d 22 6c 6f 67 34 6a 6d 61 63 68 69 6e 65   me="log4jmachine
+0190   6e 61 6d 65 22 20 76 61 6c 75 65 3d 22 43 4c 53   name" value="CLS
+01a0   2d 59 52 30 33 30 39 2d 4d 4f 4e 44 22 20 2f 3e   -YR0309-MOND" />
+01b0   3c 6c 6f 67 34 6a 3a 64 61 74 61 20 6e 61 6d 65   <log4j:data name
+01c0   3d 22 6c 6f 67 34 6e 65 74 3a 48 6f 73 74 4e 61   ="log4net:HostNa
+01d0   6d 65 22 20 76 61 6c 75 65 3d 22 43 4c 53 2d 59   me" value="CLS-Y
+01e0   52 30 33 30 39 2d 4d 4f 4e 44 22 20 2f 3e 3c 2f   R0309-MOND" /></
+01f0   6c 6f 67 34 6a 3a 70 72 6f 70 65 72 74 69 65 73   log4j:properties
+0200   3e 3c 6c 6f 67 34 6a 3a 6c 6f 63 61 74 69 6f 6e   ><log4j:location
+0210   49 6e 66 6f 20 63 6c 61 73 73 3d 22 49 6e 66 6f   Info class="Info
+0220   63 75 73 2e 53 65 72 69 61 6c 50 6f 72 74 2e 41   cus.SerialPort.A
+0230   64 61 70 74 65 72 2e 43 6f 6d 6d 61 6e 64 53 65   dapter.CommandSe
+0240   72 76 69 63 65 22 20 6d 65 74 68 6f 64 3d 22 49   rvice" method="I
+0250   6e 69 74 55 44 50 4c 69 73 74 65 6e 65 72 22 20   nitUDPListener" 
+0260   66 69 6c 65 3d 22 22 20 6c 69 6e 65 3d 22 30 22   file="" line="0"
+0270   20 2f 3e 3c 2f 6c 6f 67 34 6a 3a 65 76 65 6e 74    /></log4j:event
+0280   3e 0d 0a                                          >..
+
+
+
+
+ed 10 07 6c 00 91 46 a0 4d 2d 53 45 41 52 43 48 20 2a 20 48 54 54 50 2f 31 2e 31 0d 0a 48 6f 73 74 3a 20 23 33 39 2e 32 35 35 2e 32 35 35 2e 32 35 30 3a 31 39 30 30 0d 0a 53 54 3a 20 75 72 6e 3a 73 63 68 65 6d 61 73 2d 75 70 6e 70 2d 6f 72 67 3a 64 65 76 69 63 65 3a 49 6e 74 65 72 6e 65 74 47 61 74 65 77 61 79 44 65 76 69 63 65 3a 31 0d 0a 4d 61 6e 3a 20 22 73 73 64 70 3a 64 69 73 63 6f 76 65 72 22 0d 0a 4d 58 3a 20 33 0d 0a 0d 0a

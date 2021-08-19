@@ -1,0 +1,14 @@
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\CarSim\CarSim\bin\Debug\CarSim.exe.config
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\CarSim\CarSim\bin\Debug\CarSim.exe
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\CarSim\CarSim\bin\Debug\CarSim.pdb
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\CarSim\CarSim\obj\Debug\MainWindow.g.cs
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\CarSim\CarSim\obj\Debug\App.g.cs
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\CarSim\CarSim\obj\Debug\CarSim_MarkupCompile.cache
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\CarSim\CarSim\obj\Debug\CarSim_MarkupCompile.lref
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\CarSim\CarSim\obj\Debug\MainWindow.baml
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\CarSim\CarSim\obj\Debug\CarSim.g.resources
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\CarSim\CarSim\obj\Debug\CarSim.Properties.Resources.resources
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\CarSim\CarSim\obj\Debug\CarSim.csproj.GenerateResource.Cache
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\CarSim\CarSim\obj\Debug\CarSim.exe
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\CarSim\CarSim\obj\Debug\CarSim.pdb
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\CarSim\CarSim\obj\Debug\CarSim.csprojResolveAssemblyReference.cache

@@ -1,0 +1,14 @@
+https://developer.chrome.com/extensions/devguide
+
+Psuedo-code
+1. Get suspicious url
+2. Check if the history exists beyond when this tab was opened.
+3. Search for similar urls in the history older than the tab being scrutinized.
+	chrome.history.getVisits(chrome.history.search(object query, function callback))
+4. If similar urls not found, throw up an under suspicion warning.
+5. If similar urls found, get id of and take screenshot of the current tab. (or html?)
+	Several options for doing this...
+	chrome.tabs.captureVisibleTab(integer windowId, object options, function callback) saves as png
+	chrome.pageCapture.saveAsMHTML(object details, function callback) saves as mhtml
+6. Save mhtml or png screenshot of similar urls and place in an image array of a size determined by number of results.
+7. Compare for equality.

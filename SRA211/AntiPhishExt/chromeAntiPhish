@@ -1,0 +1,6 @@
+var firsttab = chrome.tabs.getCurrent()
+chrome.tabs.onCreated.addListener(function callback)
+chrome.tabs.query(object queryInfo, function callback)
+chrome.pageCapture.saveAsMHTML(object details, function callback) OR take screenshot (TBT)
+chrome.tabs.executeScript(integer tabId, object details, function callback)
+chrome.history.getVisits(chrome.history.search(object query, function callback))

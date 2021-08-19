@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A812AFB3-931E-4975-9DD5-B4637D0398DF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Wawa</RootNamespace>
+    <AssemblyName>Wawa</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Coffee.xaml.cs" />
+    <Compile Include="Drinks.xaml.cs" />
+    <Compile Include="glob_var.cs" />
+    <Compile Include="Hoagies.xaml.cs" />
+    <Compile Include="Lunch.xaml.cs" />
+    <Compile Include="MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs" />
+    <Compile Include="Sides.xaml.cs">
+      <DependentUpon>Sides.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window1.xaml.cs" />
+    <Page Include="Coffee.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Drinks.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Hoagies.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Lunch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sides.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="variety_lunch_dinner_cold_hoagies_turkey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Drinks.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sildes.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Stuffibng.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Meatballs.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MashPotato.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Mac&amp;CHeese.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="coffee-icon-colombian.png" />
+    <Resource Include="coffee-icon-cuban.png" />
+    <Resource Include="coffee-icon-dark.png" />
+    <Resource Include="coffee-icon-decaf.png" />
+    <Resource Include="coffee-icon-french-vanilla.png" />
+    <Resource Include="coffee-icon-guatemalan.png" />
+    <Resource Include="coffee-icon-hazlenut.png" />
+    <Resource Include="coffee-icon-regular.png" />
+    <Resource Include="coffee-icon-sumatra.png" />
+    <Resource Include="Image1.png" />
+    <Resource Include="Image2.png" />
+    <Resource Include="Image3.png" />
+    <Resource Include="Image4.png" />
+    <Resource Include="Image5.png" />
+    <Resource Include="Image6.png" />
+    <Resource Include="img_bottled_2018.png" />
+    <Resource Include="img_coffee_2020.png" />
+    <Resource Include="img_frozen_2020.png" />
+    <Resource Include="img_lattes_2020.png" />
+    <Resource Include="intensity-scale-lg.jpg" />
+    <Resource Include="quesadillas.jpg" />
+    <Resource Include="quesadillas.PNG" />
+    <Resource Include="Salad.jpg" />
+    <Resource Include="Sandwiches.jpg" />
+    <Resource Include="sodas_offerings2019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="hoagie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wawa Logo_Lg_121018.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

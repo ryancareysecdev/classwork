@@ -1,0 +1,22 @@
+Player objects:
+set ships
+call shots
+can be winning or losing
+can be computer or human, so remember the ai!
+Methods: .setShips(starting location, direction, type); .callShots(number of shots {decided at beginning, to play salvo or not}, shot locations in the grid); .isTurn(boolean); .isWinning(boolean)
+AI: if shot is a hit, continue in one of the 4 directions, randomly unless it sunk on that hit. if the next shot is a miss, try another direction. If there is more than one hit in a line, continue the line in that direction, if a miss, go opposite way. Basic AI! Shots should be random, but reject random shots if they are too close (within a radius of 2), pick a new shot before taking it.
+ 
+
+Ship objects:
+know where they are
+know if they are sunk, or hit
+can be set
+know what type of ship they are, and can report that information
+methods: .isSet(location, direction, type); .isHit(show result on grid); .getLocation(starting index, direction); .reportStatus(boolean sunk or !sunk, location of hits if any otherwise "not hit", type of ship) 
+
+Grid object:
+knows if a shot is a hit or a miss, and reports by changing color.
+records all shots!
+methods: generate grid, the same every time just an initializer letterXnumber; .placePeg(location, color, ask ship if hit); construction: 0 means empty space, 1 means a ship is there, and 2 means a ship is there and was hit. Do not disclose the numbers.
+
+IMPORTANT: Remember to focus on making this as reusable as possible. Use inheritance when it is beneficial. Do not make things difficult for yourself. Write it all, then determine what is redundant and what is not.

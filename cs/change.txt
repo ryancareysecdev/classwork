@@ -1,0 +1,105 @@
+class DenomQuant():
+   """A denomination-quantity structure
+      is represented as an instance of DenomQuant
+   """
+   __slots__ = ('denom','quant')
+
+
+def mkDenomQuant(denom, quant):
+   """Constructor: 
+      mkDenomQuant: Number * Number -> DenomQuant
+   """
+   struct = DenomQuant()
+   struct.denom = denom
+   struct.quant = quant
+   return struct
+
+
+def make_change(amount, denominations):
+   """Makes change for an amount of money using a list of denominations.
+      Arguments:
+           amount - the amount of money to make change for
+           denominations - the monetary denominations
+      Returns:
+           If correct change can be made, it returns a list of tuples containing 
+           the denominations and change amounts.  The correct change cannot be
+           made it returns None.
+   """
+   # make a local copy of the denominations because this function
+   # will otherwise destroy the caller's list
+   denom_list = denominations[:]
+   denom_list.sort() # list is modified
+
+   # no change to start with
+   change = []
+   
+   # the greedy algorithm loops through each denomination from
+   # largest to smallest and makes as much change as possible
+   # for each denomination
+   while amount > 0 and len(denom_list) > 0:
+      # get the next largest denomination from the list and remove it
+      denom = denom_list.pop() # list is modified
+
+      # use integer division to get the maximum number of coins to
+      # make change for this denomination
+      coins = amount // denom      # integer division (truncates)
+      amount = amount - coins * denom
+      
+      # store a tuple for the denomination and # of coins in
+      # the change list
+      if coins > 0:
+         change.append(mkDenomQuant(denom, coins))
+   
+   # if the final amount is not 0 we weren't able to make exact change
+   if amount > 0:
+      return None
+   else:
+      return change
+
+def readDenominations(prompt, sentinel):
+   """readDenominations: String * Integer -> ListOf(Integer)
+      Purpose: Read denomination values into a list
+   """
+   denominations = []
+   # a sentinel loop that reads denomination amounts into a list 
+   # until a the sentinel value is read
+   while True:
+      val = int(input(prompt))
+      if val == sentinel:
+         return denominations
+      else:
+         denominations.append(val)
+
+
+def displayChange(change):
+   """displayChange: ListOf(DenomQuant) -> NoneType
+      Purpose: Display the list of structures on standard output
+   """
+   print("Your change:")
+   for entry in change:
+      print(entry.quant, "coin/s of value", entry.denom, "each.")
+
+
+def main():
+   """The main program"""
+
+   denominations = readDenominations("Enter denomination (-1 to end): ", -1)
+   
+   print("Change denominations are:", denominations)
+   
+   # get the amount of money to make change for
+   amount = int(input("Make change for: "))
+
+   # get the change amounts
+   change = make_change(amount, denominations)
+
+   if change == None:
+      print("Can't make correct change!")
+   else:
+      displayChange(change)
+      
+
+      
+# invoke main function
+main()
+

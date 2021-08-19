@@ -1,0 +1,13 @@
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\MovementAndTiming\MovementAndTiming\bin\Debug\MovementAndTiming.exe.config
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\MovementAndTiming\MovementAndTiming\bin\Debug\MovementAndTiming.exe
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\MovementAndTiming\MovementAndTiming\bin\Debug\MovementAndTiming.pdb
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\MovementAndTiming\MovementAndTiming\obj\Debug\MainWindow.g.cs
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\MovementAndTiming\MovementAndTiming\obj\Debug\App.g.cs
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\MovementAndTiming\MovementAndTiming\obj\Debug\MovementAndTiming_MarkupCompile.cache
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\MovementAndTiming\MovementAndTiming\obj\Debug\MovementAndTiming_MarkupCompile.lref
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\MovementAndTiming\MovementAndTiming\obj\Debug\MainWindow.baml
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\MovementAndTiming\MovementAndTiming\obj\Debug\MovementAndTiming.g.resources
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\MovementAndTiming\MovementAndTiming\obj\Debug\MovementAndTiming.Properties.Resources.resources
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\MovementAndTiming\MovementAndTiming\obj\Debug\MovementAndTiming.csproj.GenerateResource.Cache
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\MovementAndTiming\MovementAndTiming\obj\Debug\MovementAndTiming.exe
+C:\Users\godli\OneDrive\classes\IST331\deprecated_vs_source\MovementAndTiming\MovementAndTiming\obj\Debug\MovementAndTiming.pdb

@@ -1,0 +1,18 @@
+settings
+baseDirectory
+baseDirectory set
+set baseDirectory "C:\"
+set baseDirectory C:\
+baseDirectory C:\
+baseDirectory C:\;
+baseDirectory := "C:\Users\godli\OneDrive\classes\IST411\lab12team4"
+baseDirectory := "C:\Users\godli\OneDrive\classes\IST411\lab12team4",
+settings
+set baseDirectory := "C:\Users\godli\OneDrive\classes\IST411\lab12team4"
+set baseDirectory := "C:\\Users\\godli\\OneDrive\\classes\\IST411\\lab12team4"
+baseDirectory
+inspect baseDirectory
+settings
+inspect baseDirectory
+set ThisBuild / baseDirectory := "C:\"
+run

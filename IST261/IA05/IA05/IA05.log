@@ -1,0 +1,5 @@
+2019-10-12 06:15:16.402 [main] INFO   - IA05 has started
+2019-10-12 06:15:23.738 [tryParseDouble] DEBUG  - Invalid input: mk
+2019-10-12 06:15:30.209 [tryParseDouble] DEBUG  - Invalid input: mk11
+2019-10-12 06:15:37.641 [main] DEBUG  - 11.0 + 12.0 = result
+2019-10-12 06:15:37.641 [main] DEBUG  - IA05 has ended

@@ -1,0 +1,16 @@
+{
+ “manifest_version”: 1,
+ “name”: “SimpleFishNet”,
+ “description”: “Compares two web pages for differences.”,
+ “version”: “1”,
+ “author”: “Ryan Carey”,
+"background": {
+    // Recommended
+    "persistent": false,
+    // Optional
+  },
+“chrome_url_overrides” : {
+  “newtab”: “newtab.html”
+},
+ “permissions”: [“activeTab”, "tabs", "desktopCapture"]
+}

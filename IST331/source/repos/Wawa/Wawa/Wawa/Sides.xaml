@@ -1,0 +1,27 @@
+﻿<Window x:Class="Wawa.Sides"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wawa"
+        mc:Ignorable="d"
+        Title="Sides" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnStuffing" HorizontalAlignment="Left" Margin="69,95,0,0" VerticalAlignment="Top" Width="189" Height="108" Click="btnStuffing_Click">
+            <Image x:Name="imgStuffing" HorizontalAlignment="Left" Height="108" VerticalAlignment="Top" Width="189" Source="Stuffibng.PNG" Tag="3.00"/>
+        </Button>
+        <Button x:Name="btnMeatballs" HorizontalAlignment="Left" Margin="69,247,0,0" VerticalAlignment="Top" Width="189" Height="93" Click="btnMeatballsClick">
+            <Image x:Name="imgMeatballs" HorizontalAlignment="Left" Height="93" VerticalAlignment="Top" Width="189" Source="Meatballs.PNG" Tag="2.25" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="btnMashed_Potatoes" HorizontalAlignment="Left" Margin="297,95,0,0" VerticalAlignment="Top" Width="193" Height="108" Click="btnMashed_Potatoes_Click">
+            <Image x:Name="imgMashed" HorizontalAlignment="Left" Height="108" VerticalAlignment="Top" Width="193" Source="MashPotato.PNG" Tag="3.00" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="btnMacandChesse" HorizontalAlignment="Left" Margin="297,228,0,0" VerticalAlignment="Top" Width="193" Height="112" Click="btnMacandChessesClick">
+            <Image x:Name="imgMac" HorizontalAlignment="Left" Height="102" VerticalAlignment="Top" Width="183" Source="Mac&amp;CHeese.PNG" Tag="3.50" Stretch="Fill"/>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="100" Margin="583,196,0,0" VerticalAlignment="Top" Width="100"/>
+        <ListBox x:Name="lstWawaListPrice" HorizontalAlignment="Left" Height="290" Margin="564,50,0,0" VerticalAlignment="Top" Width="151"/>
+        <Button x:Name="btnReturn" Content="Return" HorizontalAlignment="Left" Margin="564,367,0,0" VerticalAlignment="Top" Width="119" Height="44" Click="btnReturnClick" Background="#FF1F39D2" Foreground="#FFECDEDE"/>
+
+    </Grid>
+</Window>

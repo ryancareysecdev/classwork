@@ -1,0 +1,6 @@
+@GET
+    @Produces(MediaType.TEXT_HTML)
+    @Path("history/{username}")
+    public String getHistory(@PathParam("username") String username) {
+        return BettingList.findBets(userid);
+    }

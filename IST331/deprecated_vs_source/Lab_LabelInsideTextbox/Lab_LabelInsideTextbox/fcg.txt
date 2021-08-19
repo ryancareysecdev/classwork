@@ -1,0 +1,73 @@
+
+// 3/25/20
+
+		//---------------------------------------------------------------------------
+		private void winMain_ContentRendered(object sender, EventArgs e)
+		{
+			txtMain.Foreground = NO_TEXT_BRUSH;
+			txtMain.Text = txtMain.Tag.ToString();	
+		}
+
+		//---------------------------------------------------------------------------
+		private void txtMain_GotFocus(object sender, RoutedEventArgs e)
+		{
+//			MessageBox.Show("Got Fcus");
+
+			string s1, s2;
+
+			s1 = txtMain.Text;
+			s2 = txtMain.Tag.ToString();
+			
+			if ((s1.Equals(s2)) || (s1.Equals("")))
+			{
+				txtMain.Foreground = NO_TEXT_BRUSH;
+//				txtMain.Text = "";
+				txtMain.Text = (txtMain.Tag.ToString()) + "++++";
+//				txtMain.SelectionStart = 0;
+//				txtMain.SelectionLength = 0;
+				txtMain.Select(0, 0);
+			}
+			else
+			{
+				txtMain.Foreground = SOME_TEXT_BRUSH;
+			}
+		}
+
+		//---------------------------------------------------------------------------
+		private void txtMain_TextChanged(object sender, TextChangedEventArgs e)
+		{
+			int idx;
+			string s1, s2;
+
+//			MessageBox.Show("Text = " + txtMain.Text.ToString());
+
+			if ((txtMain.Text).Equals(txtMain.Tag))
+			{
+				txtMain.Foreground = NO_TEXT_BRUSH;
+				txtMain.SelectionStart = 0;
+				txtMain.Select(0, 0);
+			}
+			else 
+			{
+				s1 = txtMain.Text.ToString();
+				s2 = txtMain.Tag.ToString();
+				idx = s1.IndexOf(s2);
+				if (idx > -1)
+				{
+					txtMain.Text = s1.Substring(0, (s1.Length - s2.Length));
+					txtMain.Foreground = SOME_TEXT_BRUSH;
+				}
+			}
+		}
+
+		//---------------------------------------------------------------------------
+		private void txtMain_LostFocus(object sender, RoutedEventArgs e)
+		{
+			if ((txtMain.Text).Equals(txtMain.Tag))
+				txtDisplay.Text = "???";
+			else
+				txtDisplay.Text = txtMain.Text;
+
+			txtMain.Foreground = NO_TEXT_BRUSH;
+			txtMain.Text = txtMain.Tag.ToString();
+		}

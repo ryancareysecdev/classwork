@@ -1,0 +1,18 @@
+ 
+var doPrivacyCheck = function() {
+    try {
+        ANGEL.user = { username:"ruc230"};ANGEL.config = { api:'/api/v1.0/default.asp', base:'https://cms.psu.edu', root:'/', uploads:'/AngelUploads/', timeout:90, optOutUrl:''};
+        ANGEL.lang = {};
+        ANGEL.lang['ErrorAPIConnect'] = 'Error: could not connect to API.';
+        ANGEL.lang['Agree'] = 'Agree';
+        ANGEL.lang['Decline'] = 'Decline';
+        ANGEL.lang['PleaseRead'] = 'Please Read This Message';
+        ANGEL.lang['Cookies1'] = 'The Blackboard software application on this website has placed cookies on your computer.';
+        ANGEL.lang['Cookies2'] = 'Cookies are functions within the software that collect and store data which users input in the course of their utilization of the software. Before proceeding to further use the software application, you must consent to the collection, storage, and use of this data in accordance with the Blackboard Privacy Center, as described further at <' + 'a style="color:#1E439B" href="http://www.blackboard.com/privacy" target="_blank">http://www.blackboard.com/privacy<' + '/a>.';
+        ANGEL.lang['Cookies4'] = 'By clicking "Agree", you accept these cookies from this site, as well as how they collect, store, and use data which you input.';
+        ANGEL.lang['Cookies3']='';
+        ANGEL.eu.loadApprovalStateAndCheck(false,"PrivacyCheck");
+
+    } catch (e) {}
+};
+

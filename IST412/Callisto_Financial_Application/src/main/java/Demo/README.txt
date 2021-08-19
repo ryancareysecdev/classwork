@@ -1,0 +1,17 @@
+LOGIN INFO
+EmployeeOne, employee1
+EmployeeTwo, employee2
+EmployeeThree, employee3
+CustomerOne, customer1
+CustomerTwo, customer2
+CustomerThree, customer3
+AdminOne, admin1
+AdminTwo, admin2
+AdminThree, admin3
+ShareOne, shareholder1
+ShareTwo, shareholder2
+ShareThree, shareholder3
+
+**********************************************************************
+ 
+

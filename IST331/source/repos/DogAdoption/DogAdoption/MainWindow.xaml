@@ -1,0 +1,30 @@
+﻿<Window x:Class="DogAdoption.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DogAdoption"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700.692" Width="1032.007">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="imgDogs" HorizontalAlignment="Left" Height="670" VerticalAlignment="Top" Width="1024" Source="dogs.jpg" Grid.ColumnSpan="2" Stretch="Fill" Opacity="0.42"/>
+        <ListBox x:Name="lstDogName" HorizontalAlignment="Left" Height="169" Margin="653,56,0,0" VerticalAlignment="Top" Width="136" Grid.ColumnSpan="2">
+            <ListBoxItem x:Name="lstRiley" Content="Riley" FontSize="16" Selected="LstRiley_Selected"/>
+            <ListBoxItem x:Name="lstClifford" Content="Clifford" FontSize="16" Selected="LstClifford_Selected"/>
+            <ListBoxItem x:Name="lstScooby" Content="Scooby Doo" FontSize="16" Selected="LstScooby_Selected"/>
+            <ListBoxItem x:Name="lstBalto" Content="Balto" FontSize="16" Selected="LstBalto_Selected"/>
+        </ListBox>
+        <TextBox x:Name="txtResults" HorizontalAlignment="Left" Height="79" Margin="119,467,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="789" IsReadOnly="True" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblChosenName" Content="" HorizontalAlignment="Left" Margin="50,56,0,0" VerticalAlignment="Top" Height="79" Width="391" FontSize="36" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblName" Content="Choose a name:" HorizontalAlignment="Left" Margin="494,56,0,0" VerticalAlignment="Top" Height="54" Width="159" FontSize="20" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnReset" Content="Reset" HorizontalAlignment="Left" Margin="466,569,0,0" VerticalAlignment="Top" Width="133" Height="78" FontSize="24" Click="BtnReset_Click" Grid.ColumnSpan="2"/>
+        <Image x:Name="imgSelectedDog" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="322" Margin="88,140,0,0" VerticalAlignment="Top" Width="353" Stretch="Fill"/>
+        <Button x:Name="btnOrder" Content="Order" HorizontalAlignment="Left" Margin="653,569,0,0" VerticalAlignment="Top" Width="145" Height="78" FontSize="24" Grid.ColumnSpan="2" Click="BtnOrder_Click"/>
+        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="273,569,0,0" VerticalAlignment="Top" Width="133" Height="78" FontSize="24" Click="BtnExit_Click" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>

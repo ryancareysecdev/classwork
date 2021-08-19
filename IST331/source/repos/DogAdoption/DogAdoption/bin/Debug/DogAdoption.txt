@@ -1,0 +1,4 @@
+﻿Riley, 5/15/2004, Soft Coated Wheaten Terrier, 38 pounds, true, 48 months, rileybelly.jpg
+Clifford, 9/1/1997, Big Red, 60 tons, false, 1 month, clifford.jpg
+Scooby Doo, 1969, Great Dane, 70 pounds - 170 pounds (scooby snacks), true, 3 months, scoob.jpg
+Balto, 1919, Siberian Husky, 55 pounds, true, 1058 months, balto.jpg

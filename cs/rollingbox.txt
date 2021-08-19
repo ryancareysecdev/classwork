@@ -1,0 +1,5 @@
+draw box from the bottom right corner
+rotate by 90/divisions
+repeat
+use count to check when to shift
+subtract one from rolls every time count reaches zero

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetterGrades_Part3", "GradeLetterConverterWithArrays\LetterGrades_Part3.csproj", "{AE33EC49-E5E1-4807-B5B0-FCF01EE8181B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE33EC49-E5E1-4807-B5B0-FCF01EE8181B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE33EC49-E5E1-4807-B5B0-FCF01EE8181B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE33EC49-E5E1-4807-B5B0-FCF01EE8181B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE33EC49-E5E1-4807-B5B0-FCF01EE8181B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7BA0D172-93AB-4C90-89D9-82BB1B5330F9}
+	EndGlobalSection
+EndGlobal

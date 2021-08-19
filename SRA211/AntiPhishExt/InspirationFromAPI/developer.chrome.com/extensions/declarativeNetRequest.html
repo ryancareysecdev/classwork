@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="https://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1', 'auto');
+  ga('create', 'UA-49880327-5', {'name': 'chromeDocs'});
+  ga('send', 'pageview');
+  ga('chromeDocs.send', 'pageview');
+
+</script>
+
+    <title>chrome.declarativeNetRequest - Google Chrome</title>
+  </head>
+
+  <body>
+    <div class="gc-container">
+    <a href="declarativeNetRequest.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="https://developer.chrome.com/">
+          <img alt="Chrome: developer" src="../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Chrome</span>
+            <ul class="expandee">
+                <li class="submenu">Extend the Browser
+                  <ul>
+                      <li class="category">
+                        <a href="index.html">
+                        What are Extensions?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="getstarted.html">
+                        Get Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                            <li><a href="extensions/manifest.html">Manifest Format</a>
+                            </li>
+                            <li><a href="background_pages.html">Manage Events</a>
+                            </li>
+                            <li><a href="user_interface.html">Design User Interface</a>
+                            </li>
+                            <li><a href="content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="extensions/permission_warnings.html">Declare Permissions and Warn Users</a>
+                            </li>
+                            <li><a href="../javascript/options.js.html">Give Users Options</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="devguide.html">
+                        Developer Guide
+                        </a>
+                        <ul>
+                            <li><a href="performance.html">Reach Peak Performance</a>
+                            </li>
+                            <li><a href="user_privacy.html">Protect User Privacy</a>
+                            </li>
+                            <li><a href="security.html">Stay Secure</a>
+                            </li>
+                            <li><a href="tut_debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="tut_oauth.html">OAuth</a>
+                            </li>
+                            <li><a href="a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="messaging.html">Message Passing</a>
+                            </li>
+                            <li><a href="nativeMessaging.html">Native Messaging</a>
+                            </li>
+                            <li><a href="extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                            <li><a href="single_purpose.html">Extension Quality Guidelines FAQ</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="faq.html">FAQ</a>
+                            </li>
+                            <li><a href="whats_new.html">What's New?</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Web Store Publishing and Distribution
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore">
+                        Distribution Overview
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/webstore">Distributing Products Built for Chrome</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/about_webstore">What Is the Chrome Web Store?</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/overview">What Can You Publish?</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/get_started_simple">Tutorial: Getting Started</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/samples">Samples</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="packaging.html">
+                        Publish Extensions
+                        </a>
+                        <ul>
+                            <li><a href="packaging.html">Hosting and Updating</a>
+                            </li>
+                            <li><a href="hosting_changes.html">Hosting Policy Changes</a>
+                            </li>
+                            <li><a href="tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="themes.html">Publishing Themes</a>
+                            </li>
+                            <li><a href="external_extensions.html">Other Deployment Options</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore/money">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/webstore/money">Monetizing Your App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/identify_user">Using Google Accounts</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/pricing">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore/branding">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/webstore/branding">Branding Guidelines</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/images">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore/best_practices">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/webstore/best_practices">Best Practices</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/faq">FAQ</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Mobile Chrome
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/multidevice/user-agent">User Agents</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/multidevice/android/customtabs">Chrome Custom Tabs</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/mobile-emulation">Mobile Emulation</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/remote-debugging">Remote Debugging</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/android/overview">
+                        Chrome for Android
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/multidevice/android/overview">Overview</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/multidevice/android/intents">Android Intents with Chrome</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/multidevice/android/customtabs">Chrome Custom Tabs</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/webview/overview">
+                        Chrome WebView
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/multidevice/webview/overview">WebView for Android</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/multidevice/webview/gettingstarted">Getting Started</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/multidevice/webview/pixelperfect">Pixel-Perfect UI</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/multidevice/webview/workflow">WebView Workflow</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/multidevice/webview/tipsandtricks">Tips &amp; Tricks</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/ios/links">
+                        Chrome for iOS
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/multidevice/ios/links">Opening Links in Chrome</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/multidevice/user-agent#chrome_for_ios_user_agent">User Agent</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/faq">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Chrome OS</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/about_apps">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/about_apps">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="single_purpose.html">Extension Quality Guidelines FAQ</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/first_app">Create Your First App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_architecture">App Architecture</a>
+                            </li>
+                            <li><a href="app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/contentSecurityPolicy">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/app_codelab_intro">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab_intro">Intro - Build Chrome App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab_basics">1 - Create and run a Chrome App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab_import_todomvc">2 - Import an existing web app</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab_alarms">3 - Add alarms and notifications</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab_webview">4 - Open external links with a webview</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab_images">5 - Add images from the web</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab_filesystem">6 - Export todos to the filesystem</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab_publish">7 - Publish your app</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/chrome_apps_on_mobile">
+                        Run Chrome Apps on Mobile
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/samples">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/offline_apps">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/offline_apps">Offline First</a>
+                            </li>
+                            <li><a href="app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_storage">Storing Data</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/offline_storage">Managing Offline Storage</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/nativeMessaging">Native Messaging</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/richNotifications">Rich Notifications</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_identity">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/app_usb">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/app_usb">USB</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_serial">Serial</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_network">Network Communications</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_bluetooth">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/app_frameworks">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/app_frameworks">About MVC Architecture</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/angular_framework">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/sencha_framework">Build Apps with SenchaJS</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/game_engines">Game Engines</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/payments-iap">Monetize Your App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/analytics">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/manifest">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/manifest">Manifest File Format</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/tags/webview">Webview Tag</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/tags/appview">Appview Tag</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/api_other">Web APIs</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_deprecated">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/faq">FAQ</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/overview">Technical Overview</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/nacl-and-pnacl">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/migration">
+                        WebAssembly Migration Guide
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/sdk/download">
+                        Download the SDK
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/sdk/download">Download the Native Client SDK</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/sdk/examples">Examples</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/sdk/release-notes">Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part1">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part1">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/cds2014">Chrome Dev Summit 2014 - Codelabs</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/devcycle/building">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/building">Building</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/running">Running</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/debugging">Debugging</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/vs-addin">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/dynamic-loading">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/coding/application-structure">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/application-structure">Application Structure</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/native-client-modules">Native Client Modules</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/3D-graphics">3D Graphics</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/audio">Audio</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/file-io">File I/O</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/message-system">Messaging System</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/progress-events">Progress Events</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/distributing">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/c-api">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/c-api">Pepper C API (Stable)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/cpp-api">Pepper C++ API (Stable)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/c-api-beta">Pepper C API (Beta)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/cpp-api-beta">Pepper C++ API (Beta)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/c-api-dev">Pepper C API (Dev)</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/cpp-api-dev">Pepper C++ API (Dev)</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/glossary">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/glossary">Glossary</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/ideas">Contributor Ideas</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/nacl-manifest-format">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-bitcode-manual">Contents of PNaCl Bitcode Files</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-bitcode-abi">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-undefined-behavior">PNaCl Undefined Behavior</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-c-cpp-language-support">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/design-docs">Design Documents</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/help">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/community/security-contest/index">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Chrome APIs</span>
+            <ul class="expandee">
+                <li class="submenu">Extensions APIs
+                  <ul>
+                      <li class="category">
+                        <a href="extensions/api_index.html">
+                        Extension APIs
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Apps APIs
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/api_index">
+                        Apps APIs
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="https://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<p class="warning">
+  This API is in beta. It is only available to Chrome users on the
+  <a href="https://www.google.com/landing/chrome/beta/">beta channel</a> and
+  <a href="http://www.chromium.org/getting-involved/dev-channel">dev channel</a>.
+</p>
+<article>
+  <div itemprop="articleBody" class="api">
+    <h1>chrome.declarativeNetRequest</h1>
+    <table class="intro" id="intro">
+      <tr>
+        <td class="title">Description:</td>
+        <td>
+             The <code>chrome.declarativeNetRequest</code> API is used to block or
+             redirect network requests by specifying declarative rules.
+                    <br>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Availability:</td>
+        <td>
+            <strong>Beta</strong> and <strong>Dev</strong> channels only.
+            
+             <a href="extensions/api_index.html#beta_apis">Learn more</a>.
+            <br>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Permissions:</td>
+        <td>
+            <span class="code">
+            "declarativeNetRequest"
+                    </span>
+            <br>
+            <a href="extensions/declare_permissions.html#host-permissions">
+            host permissions
+                    </a>
+            <br>
+        </td>
+      </tr>
+    </table>
+    <section>
+      <h2 id="manifest">Manifest</h2>
+      
+      <p>
+      You must declare the <code>"declarativeNetRequest"</code> permission in the
+      extension <a href="extensions/manifest.html">manifest</a> to use this API.
+      <a href="extensions/declare_permissions.html">Host permissions</a> are required if the extension
+      wants to redirect requests. You must also declare the
+      <code>"declarative_net_request"</code> manifest key, which should be a
+      dictionary with a single key called <code>"rule_resources"</code>. It should be
+      a list containing a single element, the path to a JSON file containing the
+      declarative rules to use, as shown below.
+      </p>
+      
+      <pre data-filename="manifest.json">
+      {
+        "name": "My extension",
+        ...
+      <b>
+        "declarative_net_request" : {
+          "rule_resources" : ["rules.json"]
+        },
+        "permissions": [
+          "declarativeNetRequest",
+          "*://example.com/*"
+        ],</b>
+        ...
+      }
+      </pre>
+      
+      <h2 id="rule-resources">Rule Resources</h2>
+      
+      <p>
+      The JSON file specified as part of <code>"rule_resources"</code> in the manifest
+      contains a list of rules. The number of rules that an extension can specify is
+      bound by the <a href="declarativeNetRequest.html#property-MAX_NUMBER_OF_RULES">
+      chrome.declarativeNetRequest.MAX_NUMBER_OF_RULES</a> constant.
+      </p>
+      
+      <h2 id="rules">Rules</h2>
+      
+      <p>
+      A single declarative rule consists of four fields: <code>id</code>,
+      <code>priority</code>, <code>condition</code> and <code>action</code>. See the
+      <a href="declarativeNetRequest.html#type-Rule">Rule</a> section below for more information on the format.
+      There are three kinds of rules:
+      </p>
+      
+      <ul>
+        <li>
+          Rules that block a network request.
+        </li>
+        <li>
+          Rules that prevent a request from getting blocked by negating any matching
+          blocked rules.
+        </li>
+        <li>
+          Rules that redirect a network request.
+        </li>
+      </ul>
+      
+      <p>An example rule:</p>
+      <pre>
+      {
+        "id" : 1,
+        "action" : { "type" : "block" },
+        "condition" : {
+          "urlFilter" : "abc",
+          "domains" : ["foo.com"],
+          "resourceTypes" : ["script"]
+        }
+      }
+      </pre>
+      
+      <p>
+      The above rule will block all script requests originating from
+      <code>"foo.com"</code> to any URL with <code>"abc"</code> as a substring.
+      </p>
+      
+      <p>
+      The <code>urlFilter</code> field of a rule condition is used to specify the
+      pattern which is matched against the request URL. Some examples of URL filters:
+      </p>
+      
+      <table>
+        <tr>
+          <th><code><b>urlFilter</b></code></th>
+          <th>Matches</th>
+          <th>Does not match</th>
+        </tr>
+      
+        <tr>
+          <td><code>"abc"</code></td>
+          <td>
+            https://abcd.com<br/>
+            https://example.com/abcd
+          </td>
+          <td>http://ab.com</td>
+        </tr>
+      
+        <tr>
+          <td><code>"abc*d"</code></td>
+          <td>
+            https://abcd.com<br/>
+            https://example.com/abcxyzd
+          </td>
+          <td>http://abc.com</td>
+        </tr>
+      
+        <tr>
+          <td><code>"||a.example.com"</code></td>
+          <td>
+            https://a.example.com/<br/>
+            https://b.a.example.com/xyz
+          </td>
+          <td>http://example.com/</td>
+        </tr>
+      
+        <tr>
+          <td><code>"|https*"</code></td>
+          <td>https://example.com</td>
+          <td>
+            http://example.com/<br/>
+            http://https.com
+          </td>
+        </tr>
+      
+        <tr>
+          <td><code>"example*^123|"</code></td>
+          <td>
+            https://example.com/123<br/>
+            http://abc.com/example?123
+          </td>
+          <td>
+            https://example.com/1234<br/>
+            https://abc.com/example0123
+          </td>
+        </tr>
+      </table>
+      
+      <h2 id="page-allowlisting">Page allowlisting</h2>
+      
+      <p>
+      To disable the extension ruleset on a particular page, extensions can use the
+      <a href="declarativeNetRequest.html#method-addAllowedPages">
+      chrome.declarativeNetRequest.addAllowedPages</a> API. This allows
+      extensions to specify <a href="extensions/match_patterns.html">match patterns</a>
+      that are compared against the tab URL. Any requests originating from these pages
+      are not evaluated against the extension ruleset. The number of such patterns an
+      extension can add is bound by the
+      <a href="declarativeNetRequest.html#property-MAX_NUMBER_OF_ALLOWED_PAGES">chrome.declarativeNetRequest.MAX_NUMBER_OF_ALLOWED_PAGES</a> constant.
+      </p>
+      
+      <h2 id="implementation-details">Implementation details</h2>
+      
+      <h3 id="matching-algorithm">Matching algorithm</h3>
+      
+      <ul>
+        <li>
+          If any extension ruleset wants to block a request<sup>[1]</sup>, the network
+          request is blocked.
+        </li>
+        <li>
+          If the request is not blocked, the request is redirected if any extension
+          ruleset wants to redirect the request<sup>[2]</sup>. The most recently
+          installed extension gets preference here. If multiple redirect rules from an
+          extension’s ruleset match, the rule with the greatest priority determines
+          the redirect URL.
+        </li>
+      </ul>
+      
+      [1] An extension wants to block a request, if all the following are true:
+      <ul>
+        <li>The extension has a matching <code>block</code> rule.</li>
+        <li>The extension has no matching <code>allow</code> rule.</li>
+        <li>
+          The page from which the request originated is not allow-listed by the
+          extension using <a href="declarativeNetRequest.html#method-addAllowedPages">
+          chrome.declarativeNetRequest.addAllowedPages</a>.
+        </li>
+      </ul>
+      
+      [2] An extension wants to redirect a request, if all the following are true:
+      <ul>
+        <li>The extension has a matching <code>redirect</code> rule.</li>
+        <li>
+          The page from which the request originated is not allow-listed by the
+          extension using <a href="declarativeNetRequest.html#method-addAllowedPages">
+          chrome.declarativeNetRequest.addAllowedPages</a>.
+        </li>
+      </ul>
+      
+      <h3 id="web-request-comparison">
+        Comparison with the <a href="webRequest.html">webRequest</a> API
+      </h3>
+      
+      <ul>
+        <li>
+          The declarativeNetRequest API allows for evaluating network requests in the
+          browser itself. This makes it more performant than the webRequest API, where
+          each network request is evaluated in JavaScript in the extension process.
+        </li>
+        <li>
+          Because the requests are not intercepted by the extension process,
+          declarativeNetRequest removes the need for extensions to have a background
+          page; resulting in less memory consumption.
+        </li>
+        <li>
+          Unlike the webRequest API, blocking requests using the declarativeNetRequest
+          API requires no host permissions.
+        </li>
+        <li>
+          The declarativeNetRequest API provides better privacy to users because
+          extensions can't actually read the network requests made on the user's
+          behalf.
+        </li>
+        <li>
+          Unlike the webRequest API, any images or iframes blocked using the
+          declarativeNetRequest API are automatically collapsed in the DOM.
+        </li>
+        <li>
+          While deciding whether a request is to be blocked or redirected, the
+          declarativeNetRequest API is given priority over the webRequest API because
+          it allows for synchronous interception.
+        </li>
+        <li>
+          Evaluation of declarativeNetRequest rulesets is performed during the
+          <code>onBeforeRequest</code> stage of a network request. Extensions using
+          the webRequest API can intercept requests at different stages of the
+          request.
+        </li>
+        <li>
+          The declarativeNetRequest API only allows extensions to block or redirect
+          requests. The webRequest api is more flexible as compared to the
+          declarativeNetRequest API because it allows extensions to evaluate a request
+          programmatically.
+        </li>
+      </ul>
+      
+      <h2 id="examples">Example</h2>
+      
+      <p><b>manifest.json</b></p>
+      <pre data-filename="manifest.json">
+      {
+        "name" : "declarativeNetRequest extension",
+        "version" : "1",
+        "declarative_net_request" : {
+          "rule_resources" : ["rules.json"]
+        },
+        "permissions" : ["*://google.com/*", "declarativeNetRequest"],
+        "manifest_version" : 2
+      }
+      </pre>
+      
+      <p><b>rules.json</b></p>
+      <pre data-filename="rules.json">
+      [
+        {
+          "id" : 1,
+          "action": { "type" : "block" },
+          "condition" : {"urlFilter" : "google.com", "resourceTypes" : ["main_frame"] }
+        },
+        {
+          "id" : 2,
+          "action" : { "type" : "allow" },
+          "condition" : { "urlFilter" : "google.com/123", "resourceTypes" : ["main_frame"] }
+        },
+        {
+          "id" : 3,
+          "priority" : 1,
+          "action" : { "type" : "redirect", "redirectUrl" : "https://example.com" },
+          "condition" : { "urlFilter" : "google.com", "resourceTypes" : ["main_frame"] }
+        }
+      ]
+      </pre>
+      
+      <ul>
+        <li>
+          Consider a navigation to <code>"http://google.com"</code>. Rules with id (1)
+          and (3) match. The request will be blocked because blocking rules have
+          higher priority than redirect rules.
+        </li>
+        <li>
+          Consider a navigation to <code>"http://google.com/1234"</code>. Rules with
+          id (1), (2), and (3) match. Because the request has a matching
+          <code>allow</code> rule, the request is not blocked and instead redirected
+          to <code>"https://example.com"</code>.
+        </li>
+      </ul>
+    </section>
+    <section id="toc">
+    <h2>Summary</h2>
+    <table class="api-summary">
+      <tr>
+        <tr><th colspan="2">Types</th></tr>
+          <tr><td><a href="declarativeNetRequest.html#type-ResourceType">ResourceType</a></td></tr>
+          <tr><td><a href="declarativeNetRequest.html#type-Rule">Rule</a></td></tr>
+        <tr><th colspan="2">Properties</th></tr>
+          <tr><td><a href="declarativeNetRequest.html#property-MAX_NUMBER_OF_ALLOWED_PAGES">MAX_NUMBER_OF_ALLOWED_PAGES</a></td>
+          <tr><td><a href="declarativeNetRequest.html#property-MAX_NUMBER_OF_RULES">MAX_NUMBER_OF_RULES</a></td>
+        <tr><th colspan="2">Methods</th></tr>
+        <tr><td><a href="declarativeNetRequest.html#method-addAllowedPages">addAllowedPages</a> &minus;
+            <code class="prettyprint">
+            chrome.declarativeNetRequest.addAllowedPages(<span>array of string page_patterns</span>, <span class="optional">function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="declarativeNetRequest.html#method-removeAllowedPages">removeAllowedPages</a> &minus;
+            <code class="prettyprint">
+            chrome.declarativeNetRequest.removeAllowedPages(<span>array of string page_patterns</span>, <span class="optional">function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="declarativeNetRequest.html#method-getAllowedPages">getAllowedPages</a> &minus;
+            <code class="prettyprint">
+            chrome.declarativeNetRequest.getAllowedPages(<span>function callback</span>)
+            </code>
+          </td></tr>
+    </table>
+    </section>
+    <section>
+      <div class="api-reference">
+          <h2 id="types">Types</h2>
+            <div>
+              <h3 id="type-ResourceType">ResourceType</h3>
+              <table>
+                <tr><th>Enum</th></tr>
+                <tr><td>
+                        <code>"main_frame"</code>, 
+                        <code>"sub_frame"</code>, 
+                        <code>"stylesheet"</code>, 
+                        <code>"script"</code>, 
+                        <code>"image"</code>, 
+                        <code>"font"</code>, 
+                        <code>"object"</code>, 
+                        <code>"xmlhttprequest"</code>, 
+                        <code>"ping"</code>, 
+                        <code>"csp_report"</code>, 
+                        <code>"media"</code>, 
+                        <code>"websocket"</code>, 
+                        or <code>"other"</code>
+                </td></tr>
+                <dd>This describes the resource type of the network request.</dd>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-Rule">Rule</h3>
+              <table>
+                  <tr><th colspan="3" id="Rule-properties">properties</th></tr>
+                  <tr id="property-Rule-id">
+                    <td>integer</td>
+                    <td>
+                        id</td>
+                    <td>
+                    
+                    <p>
+                      An id which uniquely identifies a rule. Mandatory and should be >= 1.
+                    </p></td>
+                  </tr><tr id="property-Rule-priority">
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        priority</td>
+                    <td>
+                    
+                    <p>
+                      Rule priority. Mandatory for redirect rules and should be >= 1. This is used to break ties between multiple matching redirect rules.
+                    </p></td>
+                  </tr><tr id="property-Rule-condition">
+                    <td>object</td>
+                    <td>
+                        condition</td>
+                    <td>
+                    
+                    <p>
+                      The condition under which this rule is triggered.
+                    </p>  <table class="innerTable">
+                        <tr id="property-condition-urlFilter">
+                          <td>string</td>
+                          <td><span class="optional">(optional)</span>
+                              urlFilter</td>
+                          <td>
+                          
+                          <p>
+                            <p>The pattern which is matched against the network request url. Supported constructs:</p><p><b>'*'</b>  : Wildcard: Matches any number of characters.</p><p><b>'|'</b>  : Left/right anchor: If used at either end of the pattern,               specifies the beginning/end of the url respectively.</p><p><b>'||'</b> : Domain name anchor: If used at the beginning of the pattern,               specifies the start of a (sub-)domain of the URL.</p><p><b>'^'</b>  : Separator character: This matches anything except a letter, a               digit or one of the following: _ - . %. This can also match               the end of the URL.</p><p>Therefore <code>urlFilter</code> is composed of the following parts: (optional Left/Domain name anchor) + pattern + (optional Right anchor).</p><p>If omitted, all urls are matched. An empty string is not allowed.</p><p>Note: The <code>urlFilter</code> must be composed of only ASCII characters. This is matched against a url where the host is encoded in the punycode format (in case of internationalized domains) and any other non-ascii characters are url encoded in utf-8. For example, when the request url is http://abc.рф?q=ф, the <code>urlFilter</code> will be matched against the url http://abc.xn--p1ai/?q=%D1%84.</p>
+                          </p></td>
+                        </tr><tr id="property-condition-isUrlFilterCaseSensitive">
+                          <td>boolean</td>
+                          <td><span class="optional">(optional)</span>
+                              isUrlFilterCaseSensitive</td>
+                          <td>
+                          
+                          <p>
+                            Whether the <code>urlFilter</code> is case sensitive. Default is true.
+                          </p></td>
+                        </tr><tr id="property-condition-domains">
+                          <td>array of string</td>
+                          <td><span class="optional">(optional)</span>
+                              domains</td>
+                          <td>
+                          
+                          <p>
+                            <p>The rule will only match network requests originating from the list of <code>domains</code>. If the list is omitted, the rule is applied to requests from all domains. An empty list is not allowed.</p><p>Note: sub-domains like "a.example.com" are also allowed. The entries must consist of only ascii characters. Use punycode encoding for internationalized domains.</p>
+                          </p></td>
+                        </tr><tr id="property-condition-excludedDomains">
+                          <td>array of string</td>
+                          <td><span class="optional">(optional)</span>
+                              excludedDomains</td>
+                          <td>
+                          
+                          <p>
+                            <p>The rule will not match network requests originating from the list of <code>excludedDomains</code>. If the list is empty or omitted, no domains are excluded. This takes precedence over <code>domains</code>.</p><p>Note: sub-domains like "a.example.com" are also allowed. The entries must consist of only ascii characters. Use punycode encoding for internationalized domains.</p>
+                          </p></td>
+                        </tr><tr id="property-condition-resourceTypes">
+                          <td>array of     <a href="declarativeNetRequest.html#type-ResourceType">ResourceType</a></td>
+                          <td><span class="optional">(optional)</span>
+                              resourceTypes</td>
+                          <td>
+                          
+                          <p>
+                            List of resource types which the rule can match. An empty list is not allowed.
+                          </p></td>
+                        </tr><tr id="property-condition-excludedResourceTypes">
+                          <td>array of     <a href="declarativeNetRequest.html#type-ResourceType">ResourceType</a></td>
+                          <td><span class="optional">(optional)</span>
+                              excludedResourceTypes</td>
+                          <td>
+                          
+                          <p>
+                            List of resource types which the rule won't match. Only one of <code>resourceTypes</code> and <code>excludedResourceTypes</code> should be specified. If neither of them is specified, all resource types except "main_frame" are blocked.
+                          </p></td>
+                        </tr><tr id="property-condition-domainType">
+                          <td>enum of    <code>"firstParty"</code>,    or <code>"thirdParty"</code></td>
+                          <td><span class="optional">(optional)</span>
+                              domainType</td>
+                          <td>
+                          
+                          <p>
+                            Specifies whether the network request is first-party or third-party to the domain from which it originated. If omitted, all requests are accepted.
+                          </p>    <dl>
+                                <dt>firstParty</dt>
+                                <dd>
+                                  The network request is first party to the frame in which it originated.
+                                </dd>
+                              </dl>
+                              <dl>
+                                <dt>thirdParty</dt>
+                                <dd>
+                                  The network request is third party to the frame in which it originated.
+                                </dd>
+                              </dl>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr><tr id="property-Rule-action">
+                    <td>object</td>
+                    <td>
+                        action</td>
+                    <td>
+                    
+                    <p>
+                      The action to take if this rule is matched.
+                    </p>  <table class="innerTable">
+                        <tr id="property-action-type">
+                          <td>enum of    <code>"block"</code>,    <code>"redirect"</code>,    or <code>"allow"</code></td>
+                          <td>
+                              type</td>
+                          <td>
+                          
+                          <p>
+                            The type of action to perform.
+                          </p>    <dl>
+                                <dt>block</dt>
+                                <dd>
+                                  Block the network request.
+                                </dd>
+                              </dl>
+                              <dl>
+                                <dt>redirect</dt>
+                                <dd>
+                                  Redirect the network request.
+                                </dd>
+                              </dl>
+                              <dl>
+                                <dt>allow</dt>
+                                <dd>
+                                  Allow the network request. The request won't be blocked even if there is a blocking rule which matches it.
+                                </dd>
+                              </dl>
+                          </td>
+                        </tr><tr id="property-action-redirectUrl">
+                          <td>string</td>
+                          <td><span class="optional">(optional)</span>
+                              redirectUrl</td>
+                          <td>
+                          
+                          <p>
+                            The redirect url. Only valid if RuleActionType is "redirect".
+                          </p></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+              </table>
+            </div>
+          <h2 id="properties">Properties</h2>
+          <table>
+            <tr>
+              <td><span class="type_name">  <code>100</code></span></td>
+              <td><code id="property-MAX_NUMBER_OF_ALLOWED_PAGES">chrome.declarativeNetRequest.MAX_NUMBER_OF_ALLOWED_PAGES</code></td>
+              <td>
+                  The maximum number of allowed pages that an extension can add.
+              </td>
+            </tr>
+            <tr>
+              <td><span class="type_name">  <code>30,000</code></span></td>
+              <td><code id="property-MAX_NUMBER_OF_RULES">chrome.declarativeNetRequest.MAX_NUMBER_OF_RULES</code></td>
+              <td>
+                  The maximum number of rules that an extension can specify in the rule resources file. Any excess rules will be ignored and an install warning will be raised.
+              </td>
+            </tr>
+          </table>
+          <h2 id="methods">Methods</h2>
+            <div>
+              <h3
+                  id="method-addAllowedPages"
+                  >addAllowedPages
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.declarativeNetRequest.addAllowedPages(<span>array of string page_patterns</span>, <span class="optional">function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Adds <code>page_patterns</code> to the set of allowed pages. Requests from these pages are not intercepted by the extension. These are persisted across browser sessions. Note: <a href="declarativeNetRequest.html#property-MAX_NUMBER_OF_ALLOWED_PAGES"> MAX_NUMBER_OF_ALLOWED_PAGES</a> is the maximum number of allowed page an extension can add. Also, adding page patterns is atomic. In case of an error, no page pattern is added.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-addAllowedPages-page_patterns">
+                      <td>array of string</td>
+                      <td>
+                          page_patterns</td>
+                      <td>
+                      
+                      <p>
+                        Array of <a href="extensions/match_patterns.html">match patterns</a> which are to be allowed.
+                      </p></td>
+                    </tr>
+                    <tr id="property-addAllowedPages-callback">
+                      <td>function</td>
+                      <td><span class="optional">(optional)</span>
+                          callback</td>
+                      <td>
+                      
+                      <p>
+                        Called after the <code>page_patterns</code> have been added. chrome.runtime.lastError will be set in case of an error, for example if an invalid page pattern is specified or the extension exceeded the maximum page patterns limit.
+                      </p>    <p>
+                              If you specify the <em>callback</em> parameter, it should
+                              be a function that looks like this:
+                          </p>
+                        <code class="prettyprint">function() <span class="subdued">{...}</span>;</code>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-removeAllowedPages"
+                  >removeAllowedPages
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.declarativeNetRequest.removeAllowedPages(<span>array of string page_patterns</span>, <span class="optional">function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Removes <code>page_patterns</code> from the set of allowed pages. Note: Removing page patterns is atomic. In case of an error, no page pattern is removed.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-removeAllowedPages-page_patterns">
+                      <td>array of string</td>
+                      <td>
+                          page_patterns</td>
+                      <td>
+                      
+                      <p>
+                        Array of <a href="extensions/match_patterns.html">match patterns</a> which are to be removed.
+                      </p></td>
+                    </tr>
+                    <tr id="property-removeAllowedPages-callback">
+                      <td>function</td>
+                      <td><span class="optional">(optional)</span>
+                          callback</td>
+                      <td>
+                      
+                      <p>
+                        Called after the <code>page_patterns</code> have been removed. chrome.runtime.lastError will be set in case of an error.
+                      </p>    <p>
+                              If you specify the <em>callback</em> parameter, it should
+                              be a function that looks like this:
+                          </p>
+                        <code class="prettyprint">function() <span class="subdued">{...}</span>;</code>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-getAllowedPages"
+                  >getAllowedPages
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              chrome.declarativeNetRequest.getAllowedPages(<span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Returns the current set of allowed pages.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr id="property-getAllowedPages-callback">
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                      
+                      <p>
+                        Called with the set of currently allowed pages.
+                      </p>    <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(array of string result) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr id="property-callback-result">
+                              <td>array of string</td>
+                              <td>
+                                  result</td>
+                              <td>
+                              
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+      </div>
+    </section>
+  </div>
+</article>
+    </main>
+    </div>
+
+    <footer id="gc-footer" role="contentinfo">
+      <div class="g-section g-tpl-50-50 gc-container">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="http://crbug.com/new" data-feedback>Report a content bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="https://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../static/js/fatnav.js"></script>
+    <script src="../static/js/article.js"></script>
+    <script src="../static/js/prettify.js"></script>
+    <script src="../static/js/search.js"></script>
+    <script src="https://www.gstatic.com/feedback/api.js"></script>
+    <script src="../static/js/site.js"></script>
+  </body>
+</html>

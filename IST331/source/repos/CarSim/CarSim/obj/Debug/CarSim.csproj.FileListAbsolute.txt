@@ -1,0 +1,15 @@
+C:\Users\Owner\OneDrive\classes\IST331\source\repos\CarSim\CarSim\obj\Debug\MainWindow.g.cs
+C:\Users\Owner\OneDrive\classes\IST331\source\repos\CarSim\CarSim\obj\Debug\App.g.cs
+C:\Users\Owner\OneDrive\classes\IST331\source\repos\CarSim\CarSim\obj\Debug\CarSim_MarkupCompile.cache
+C:\Users\Owner\OneDrive\classes\IST331\source\repos\CarSim\CarSim\obj\Debug\CarSim_MarkupCompile.lref
+C:\Users\Owner\OneDrive\classes\IST331\source\repos\CarSim\CarSim\bin\Debug\CarSim.exe.config
+C:\Users\Owner\OneDrive\classes\IST331\source\repos\CarSim\CarSim\bin\Debug\CarSim.exe
+C:\Users\Owner\OneDrive\classes\IST331\source\repos\CarSim\CarSim\bin\Debug\CarSim.pdb
+C:\Users\Owner\OneDrive\classes\IST331\source\repos\CarSim\CarSim\obj\Debug\MainWindow.baml
+C:\Users\Owner\OneDrive\classes\IST331\source\repos\CarSim\CarSim\obj\Debug\CarSim.g.resources
+C:\Users\Owner\OneDrive\classes\IST331\source\repos\CarSim\CarSim\obj\Debug\CarSim.Properties.Resources.resources
+C:\Users\Owner\OneDrive\classes\IST331\source\repos\CarSim\CarSim\obj\Debug\CarSim.csproj.GenerateResource.cache
+C:\Users\Owner\OneDrive\classes\IST331\source\repos\CarSim\CarSim\obj\Debug\CarSim.csproj.CoreCompileInputs.cache
+C:\Users\Owner\OneDrive\classes\IST331\source\repos\CarSim\CarSim\obj\Debug\CarSim.exe
+C:\Users\Owner\OneDrive\classes\IST331\source\repos\CarSim\CarSim\obj\Debug\CarSim.pdb
+C:\Users\Owner\OneDrive\classes\IST331\source\repos\CarSim\CarSim\obj\Debug\CarSim.csprojAssemblyReference.cache

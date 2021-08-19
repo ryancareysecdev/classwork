@@ -1,0 +1,19 @@
+﻿<Window x:Class="Wawa.MainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wawa"
+        mc:Ignorable="d"
+        Title="MainMenu" Height="450" Width="800">
+    <Grid Margin="-2,0,1.815,0.109">
+        <ListBox x:Name="lstReceipt" HorizontalAlignment="Left" Height="364" Margin="623,34,0,0" VerticalAlignment="Top" Width="161"/>
+        <Image x:Name="imgLunch" HorizontalAlignment="Left" Height="59" Margin="214,173,0,0" VerticalAlignment="Top" Width="137" Source="variety_lunch_dinner_cold_hoagies_turkey.png" Stretch="UniformToFill" MouseLeftButtonDown="imgLunch_MouseLeftButtonDown"/>
+        <Image x:Name="imgDrinks" HorizontalAlignment="Left" Height="87" Margin="25,145,0,0" VerticalAlignment="Top" Width="137" Source="Drinks.PNG" MouseLeftButtonDown="imgDrinks_MouseLeftButtonDown"/>
+        <TextBox HorizontalAlignment="Left" Height="59" Margin="418,34,0,0" TextWrapping="Wrap" Text="Name: &#xA;Ryan Carey" VerticalAlignment="Top" Width="200" TextChanged="TextBox_TextChanged"/>
+        <Image x:Name="imgSides" HorizontalAlignment="Left" Height="62" VerticalAlignment="Top" Width="113" Source="Sildes.PNG" RenderTransformOrigin="0.421,0.42" Margin="418,170,0,0" MouseLeftButtonDown="imgSides_MouseLeftButtonDown"/>
+        <Button x:Name="btnCancel" Content="Cancel Order" HorizontalAlignment="Left" Margin="96,299,0,0" VerticalAlignment="Top" Width="116" Height="59"/>
+        <Button x:Name="btnPrint" Content="Print Order" HorizontalAlignment="Left" Margin="280,299,0,0" VerticalAlignment="Top" Width="116" Height="59" Tag="1001"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,7 @@
+
+window._angelConfig={versionLastChangedIn:'81012',activate:true,linkDefault:false,linkLabel:'HTML Editor',editorBase:'/inlineeditor/',sessionBasePath:'',sectionPath:'/Fall1/2168/21681--11960/',angelPath:'/',pluginScripts:'/InlineEditor/extensions/scripts/',uploadPath:'/AngelUploads/',spellCheck:'/spellcheck.asp?SPCK_SHOW_RESULTS=0&SPCK_CUSTOM_DICTIONARY=Custom%2Fruc230%2Edic',fontSizes:'70%/xx-small;80%/x-small;90%/small;100%/medium;120%/large;150%/x-large;175%/xx-large',lang:'en'}
+var el = document.createElement('script');
+el.async = false;
+el.src = '/inlineeditor/' + 'fckeditor.js?v=' + encodeURIComponent(window._angelConfig.versionLastChangedIn);
+el.type = 'text/javascript';
+(document.getElementsByTagName('HEAD')[0] || document.body).appendChild(el);

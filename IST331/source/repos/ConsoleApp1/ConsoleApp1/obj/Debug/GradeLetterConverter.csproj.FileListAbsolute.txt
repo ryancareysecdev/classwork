@@ -1,0 +1,7 @@
+c:\users\ruc230\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+c:\users\ruc230\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+c:\users\ruc230\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+c:\users\ruc230\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\GradeLetterConverter.csprojAssemblyReference.cache
+c:\users\ruc230\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\GradeLetterConverter.csproj.CoreCompileInputs.cache
+c:\users\ruc230\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+c:\users\ruc230\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
